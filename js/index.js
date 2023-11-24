@@ -35,3 +35,57 @@ for (let i = 0; i < skills.length; i++) {
 }
 // Finally, append the skillsList to the skillsSection
 skillsSection.appendChild(skillsList);
+
+const messageForm = document.querySelector('form[name="leave_message"]');
+
+messageForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const usersName = e.target.usersName.value;
+    const usersEmail = e.target.usersEmail.value;
+    const usersMessage = e.target.usersMessage.value;
+
+    console.log(usersName, usersEmail, usersMessage);
+
+    // Clear the form
+    messageForm.reset()
+    //li.innerHTML = `<p><strong>Welcome, ${usersName}!</strong> We've received your message ${usersMessage} with the email ${usersEmail}</p>`
+
+    const messageSection = document.getElementById("messages");
+    const messageList = messageSection.querySelector("ul");
+
+    const newMessage = document.createElement("li");
+
+
+    // Create a mailto link and a span
+    newMessage.innerHTML = `
+      <p><strong>Welcome, ${usersName}!</strong> We've received your message ${usersMessage} with the email ${usersEmail}</p>
+      <a href="mailto:${usersEmail}">${usersName}</a>
+      <span>${usersMessage}</span>
+    `;
+
+
+    // Create a remove button
+    const removeButton = document.createElement("button");
+    removeButton.innerText = "Remove";
+    removeButton.type = "button";
+
+    // Create a span for the button
+    const buttonSpan = document.createElement("span");
+    buttonSpan.appendChild(removeButton);
+
+
+    // Add event listener to the removeButton
+    removeButton.addEventListener('click', () => {
+        const entry = removeButton.parentNode;
+        entry.remove();
+
+    });
+
+
+    // Append removeButton and buttonSpan to newMessage
+    newMessage.appendChild(removeButton);
+    newMessage.appendChild(buttonSpan);
+
+    // Append newMessage to messageList
+    messageList.appendChild(newMessage);
+});
