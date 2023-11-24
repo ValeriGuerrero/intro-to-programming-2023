@@ -1,9 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up Form</title>
+    <!--link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" /-->
     <title>Valeri Guerrero</title>
 </head>
 <body>
@@ -98,6 +105,32 @@
         <p>
             <a href="https://github.com/ValeriGuerrero"> Github</a>
         </p>
+    </section>
+    <section id="leave_a_message">
+        <h2>Leave a Message</h2>
+        <form name="leave_message">
+
+            <label for="name">User Name:</label>
+            <input type="text" id="name" name="usersName" required>
+            <br>
+            <!-- <i class="fas fa-user"></i> -->
+            <label for="email">Users email:
+                <input type="email" id="email" name="usersEmail" required>
+            </label><br>
+
+            <label for="textArea">Users Message:
+                <textarea id="textArea" name="usersMessage" required></textarea>
+            </label><br>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+    <section id="messages">
+        <h2>Messages</h2>
+        <ul>
+            <!-- This is where dynamically added messages will go -->
+        </ul>
+
     </section>
     <footer>
 
