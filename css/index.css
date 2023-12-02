@@ -1,0 +1,75 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background: rgb(206, 227, 225);
+    padding: 1.5rem;
+    color: brown;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 2rem;
+}
+
+
+a:hover {
+    color: rgb(144, 11, 221);
+}
+
+section {
+    padding: 1rem;
+    margin: 1rem;
+}
+
+#home, figure {
+    text-align: center;
+    padding: 2rem;
+}
+
+h1, h2 {
+    font-size: 3rem;
+    font-weight: 2rem;
+    color: rgb(78, 91, 172);
+}
+
+li {
+    border-block-style: groove;
+}
+
+label {
+    font-size: large;
+    color: rgb(255, 0, 115);
+}
+
+input[type=text], [type=email], textArea{
+    font-size: 2rem;
+    width: 15rem;
+    color:darkolivegreen;
+    padding: 1rem;
+    margin: .5rem;
+    border: solid .4rem rgb(51, 166, 224);
+    border-radius: 1rem; 
+  }
+
+  .btn{
+    padding: 1rem;
+    margin: 3rem 0 1rem 13rem;
+    background-color: rgba(119, 193, 225, 0.637);
+    border-radius: 2rem;
+  }
+
+  ul, #messages{
+        list-style-type: square;
+  }
+
+  footer{
+    background-color: antiquewhite;
+    padding-left: 38rem;
+  }
+ 
