@@ -18,7 +18,7 @@ copyright.innerHTML = "© Valeri Guerrero" + thisYear;
 footer.appendChild(copyright);
 
 //creating a variable listing my skills
-let skills = ["Javascript", "CSS", "HTML"];
+let skills = ["Javascript: Beginner", "CSS: Intermediate", "HTML: Intermediate"];
 
 //
 const skillsSection = document.getElementById("skills");
@@ -79,12 +79,16 @@ messageForm.addEventListener('submit', (e) => {
         const entry = removeButton.parentNode;
         entry.remove();
 
+
     });
 
 
     // Append removeButton and buttonSpan to newMessage
     newMessage.appendChild(removeButton);
     newMessage.appendChild(buttonSpan);
+
+    // Add a class to the button for easier styling
+    removeButton.classList.add('remove-button');
 
     // Append newMessage to messageList
     messageList.appendChild(newMessage);

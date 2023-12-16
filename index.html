@@ -36,7 +36,7 @@
             <h1 id="home">Valeri Guerrero</h1>
             <!--a picture of myself-->
             <figure>
-                <img src="./Valeri.png" alt="Picture of myself" width="190" height="250">
+                <img class="headshot" src="./Valeri.png" alt="Picture of myself">
                 <figcaption class="caption"> Valeri Guerrero</figcaption>
             </figure>
         </div>
@@ -50,7 +50,7 @@
             mind to start any business you already know the basics to build a website from scratch, or even if it's
             to
             help a non profit organization you already have what it takes. I am an animal lover and sometimes when I
-            can I foster dogs or rescue cats.
+            can, I foster dogs or rescue cats.
         </p>
         <!--a picture of one of the cats I rescued-->
         <figure>
@@ -68,11 +68,12 @@
             <figcaption class="caption">Riley</figcaption>
         </figure>
     </section>
-    <section>
+    <!--My experience section-->
+    <section id="work">
         <h1 id="experience"> Experience</h1>
-        <ul>
+        <ul class="experience-list">
             <li>
-                Javascript: Beginner
+                Building small websites
             </li>
             <li>
                 HTML: Intermediate
@@ -89,20 +90,20 @@
         </ul>
     </section>
     <section id="skills">
-        <h2>Skills</h2>
-        <ul>
+        <h2 class="skill-title">Skills</h2>
+        <ul class="skill-list">
 
         </ul>
     </section>
     <section>
         <h1 id="connect">Connect</h1>
-        <p>
+        <p class="my-email">
             valeriguerrero@outlook.com
         </p>
-        <p>
+        <p class="twitter">
             <a href="https://twitter.com/lifecoachVale" target="_blank" class="btn-small">Twitter</a>
         </p>
-        <p>
+        <p class="github">
             <a href="https://github.com/ValeriGuerrero"> Github</a>
         </p>
     </section>
@@ -110,8 +111,9 @@
         <h2>Leave a Message</h2>
         <form name="leave_message">
 
-            <label for="name">User Name:</label>
-            <input type="text" id="name" name="usersName" required>
+            <label for="name">User Name:
+                <input type="text" id="name" name="usersName" required>
+            </label>
             <br>
             <!-- <i class="fas fa-user"></i> -->
             <label for="email">Users email:
@@ -126,7 +128,7 @@
         </form>
     </section>
     <section id="messages">
-        <h2>Messages</h2>
+        <h2 class="message-title">Messages</h2>
         <ul>
             <!-- This is where dynamically added messages will go -->
         </ul>
