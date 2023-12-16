@@ -17,6 +17,10 @@ body {
     font-size: 2rem;
 }
 
+.headshot{
+    height:250px;
+    width: 200px;
+}
 
 a:hover {
     color: rgb(144, 11, 221);
@@ -25,6 +29,7 @@ a:hover {
 section {
     padding: 1rem;
     margin: 1rem;
+    text-align: center;
 }
 
 #home, figure {
@@ -39,17 +44,55 @@ h1, h2 {
 }
 
 li {
-    border-block-style: groove;
+ border-block-style: groove;
+}
+
+#experience, .skill-title {
+    padding: 1rem 1rem 3rem 3rem;
+    text-align: center;
+}
+
+.experience-list, .skill-list {
+    padding-left: 7rem;
+    display: grid;
+    max-width: 1000px;
+    grid-template-columns: 22rem 22rem 22rem;
+    grid-template-rows: 6rem 6rem ;
+    grid-gap: 7rem;
+    
+}
+
+#connect {
+    text-align: center;
+}
+
+.my-email, .twitter, .github, {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+form, #name, #email, #textArea {
+    display: grid;
+    margin: 2rem 0 2rem 0;
+    place-content: center;
+    grid-template-columns:  28rem 10rem 28rem;
+    align-items: center;
+    justify-items: center;
+   /* justify-content: space-around;*/
+    padding-top: 5rem;
 }
 
 label {
     font-size: large;
-    color: rgb(255, 0, 115);
+    color: rgb(159, 90, 173);
 }
 
 input[type=text], [type=email], textArea{
     font-size: 2rem;
-    width: 15rem;
+    width: 20rem;
+    height: 2rem;
     color:darkolivegreen;
     padding: 1rem;
     margin: .5rem;
@@ -57,11 +100,19 @@ input[type=text], [type=email], textArea{
     border-radius: 1rem; 
   }
 
+  textArea{
+    height: 8rem;
+    width: 25rem;
+  }
+
   .btn{
     padding: 1rem;
-    margin: 3rem 0 1rem 13rem;
+    margin: 3rem 0 5rem 38rem;
     background-color: rgba(119, 193, 225, 0.637);
     border-radius: 2rem;
+    place-content: center;
+    align-items: center;
+    justify-items: center;
   }
 
   ul, #messages{
@@ -73,3 +124,204 @@ input[type=text], [type=email], textArea{
     padding-left: 38rem;
   }
  
+
+  @media screen and (min-width: 320px) and (max-width: 480px){
+    #experience, .skill-title {
+        padding: 1rem 1rem 3rem 3rem;
+        text-align: center;
+    }
+    
+    .experience-list, .skill-list {
+        padding-left: 6rem;
+        display: grid;
+        max-width: 1000px;
+        grid-template-columns: 22rem;
+        grid-gap: 4rem;
+    }
+
+    form, #name, #email, #textArea {
+        display: grid;
+        margin: 2rem 0 2rem 0;
+        place-content: center;
+        grid-template-columns:  28rem ;
+        align-items: center;
+        justify-items: center;
+       /* justify-content: space-around;*/
+        padding-top: 5rem;
+    }
+
+    input[type=text], [type=email], textArea{
+        font-size: 2rem;
+        width: 22rem;
+        height: .5rem;
+        color:darkolivegreen;
+        border: solid .4rem rgb(51, 166, 224);
+        border-radius: 1rem; 
+      }
+
+    .btn{
+        padding: 1rem;
+        margin: 3rem ;
+        background-color: rgba(119, 225, 211, 0.637);
+        border-radius: 2rem;
+        place-content: center;
+        align-items: center;
+        justify-items: center;
+      }
+    
+      footer{
+        background-color: antiquewhite;
+        padding-left: 10rem;
+      }
+  }
+
+  @media screen and (min-width: 600px) and (max-width: 768px){
+
+    body {
+        background: rgb(206, 227, 225);
+        padding: 1.5rem;
+        color: brown;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 3rem;
+    }
+
+    .headshot {
+        height:300px;
+        width: 250px;
+    }
+    
+    .experience-list, .skill-list {
+        padding-left: 6rem;
+        margin-left: 10rem;
+        display: grid;
+        max-width: 900px;
+        grid-template-columns: 35rem;
+        grid-gap: 4rem;
+    }
+
+    .btn{
+        padding: 1rem;
+        margin: 3rem 0 5rem 38rem;
+        background-color: rgba(211, 119, 225, 0.637);
+        border-radius: 2rem;
+        place-content: center;
+        align-items: center;
+        justify-items: center;
+      }
+    
+      footer{
+        background-color: antiquewhite;
+        padding-left: 20rem;
+      }
+
+      .remove-button{
+        height: 4rem;
+        width: 12rem;
+        font-size: 18px;
+        border-radius: 2rem;
+      }
+  }
+
+  @media screen and (min-width: 900px) and (max-width: 1024px){
+
+    body {
+        font-size: 4rem;
+    }
+
+    .headshot {
+        height:350px;
+        width: 280px;
+    }
+
+    #home{
+        font-size: 4.5rem;
+    }
+
+    #experience, .skill-title {
+        font-size: 4.5rem;
+    }
+    
+    .experience-list, .skill-list {
+        padding-left: 15rem;
+        margin-left: 15rem;
+        display: grid;
+        max-width: 900px;
+        grid-template-columns: 35rem;
+        grid-gap: 4rem;
+    }
+
+    label {
+       
+        font-size: 3rem;
+    }
+
+    .btn{
+        padding: 2rem;
+        margin: 3rem 0 5rem 38rem;
+        background-color: rgba(130, 225, 119, 0.637);
+        font-size: 2rem;
+      }
+    
+      footer{
+        background-color: antiquewhite;
+        padding-left: 26rem;
+      }
+
+      .remove-button{
+        height: 4rem;
+        width: 12rem;
+        font-size: 18px;
+        border-radius: 2rem;
+      }
+  }
+
+  @media screen and (min-width: 1200px) {
+
+    body {
+        font-size: 6rem;
+    }
+
+    .headshot {
+        height:450px;
+        width: 380px;
+    }
+
+    #home, #about, #experience, .skill-title, #connect, .message-title{
+        font-size: 7rem;
+    }
+    
+    .experience-list, .skill-list {
+        padding-left: 18rem;
+        margin-left: 18rem;
+        display: grid;
+        max-width: 1000px;
+        grid-template-columns: 45rem;
+        grid-gap: 4rem;
+        font-size: 4.3rem;
+    }
+
+    label {
+       
+        font-size: 4rem;
+    }
+
+    .btn{
+        padding: 2rem;
+        margin: 3rem 0 5rem 38rem;
+        background-color: rgba(130, 225, 119, 0.637);
+        font-size: 2rem;
+      }
+    
+      footer{
+        background-color: antiquewhite;
+        padding-left: 26rem;
+      }
+
+      .remove-button{
+        height: 7rem;
+        width: 17rem;
+        font-size: 23px;
+        border-radius: 2rem;
+      }
+  }
+
