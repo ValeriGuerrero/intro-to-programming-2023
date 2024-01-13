@@ -93,3 +93,24 @@ messageForm.addEventListener('submit', (e) => {
     // Append newMessage to messageList
     messageList.appendChild(newMessage);
 });
+
+let githubRequest = new XMLHttpRequest();
+
+githubRequest.open("GET", "https://api.github.com/users/ValeriGuerrero/repos");
+
+githubRequest.send();
+
+githubRequest.onload = function () {
+    let repositories = JSON.parse(githubRequest.response)
+    console.log(repositories);
+    let projectSection = document.getElementById("projects");
+    let projectList = projectSection.querySelector('ul');
+
+    for (let i = 0; i < repositories.length; i++) {
+        // Create a new list item (li) element
+        let project = document.createElement('li');
+        project.innerText = repositories[i].name;
+        projectList.appendChild(project);
+
+    }
+};
