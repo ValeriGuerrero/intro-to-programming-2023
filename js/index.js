@@ -1,3 +1,14 @@
+const centerItem = document.querySelector(".center-item");
+const menu = document.querySelector(".menu");
+
+centerItem.addEventListener("mouseover", () => {
+    menu.classList.add("change");
+});
+
+menu.addEventListener("mouseleave", () => {
+    menu.classList.remove("change");
+});
+
 // setting the new date
 let today = new Date();
 // setting the year 
@@ -94,7 +105,7 @@ messageForm.addEventListener('submit', (e) => {
     messageList.appendChild(newMessage);
 });
 
-let githubRequest = new XMLHttpRequest();
+/*let githubRequest = new XMLHttpRequest();
 
 githubRequest.open("GET", "https://api.github.com/users/ValeriGuerrero/repos");
 
@@ -114,3 +125,27 @@ githubRequest.onload = function () {
 
     }
 };
+*/
+
+fetch("https://api.github.com/users/ValeriGuerrero/repos")
+    .then(response => {
+        return response.json(); // Parse the JSON in the response
+    })
+    .then((repositories) => {
+
+        let projectSection = document.getElementById("projects");
+        let projectList = projectSection.querySelector('ul');
+
+        for (let i = 0; i < repositories.length; i++) {
+            // Create a new list item (li) element
+            let project = document.createElement('li');
+            project.innerText = repositories[i].name;
+            projectList.appendChild(project);
+
+        }
+        return repositories;
+    })
+
+    .catch(error => {
+        console.error("Fetch error:", error)
+    });
