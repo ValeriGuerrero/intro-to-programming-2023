@@ -14,21 +14,23 @@ body {
     padding: 1.5rem;
     color: rgb(126, 126, 226);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 2rem;
+    font-size: 1.7rem;
+    
 }
 
 .container {
     width: 100%;
-    height: 25vh;
+    height: 20vh;
     display: flex;
     align-items: center;
-    background-color: #183172;
+    background-color: rgb(92, 92, 167);
     perspective: 10rem;
+    overflow: hidden;
 }
 
 .menu {
     width: 100%;
-    padding: 0 5rem;
+    padding: 0 3rem;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -41,11 +43,11 @@ body {
   }
   
 .menu-item {
-    font: 4rem;
-    width: 16rem;
-    height: 8rem;
+    
+    width: 11rem;
+    height: 5rem;
     margin: 1rem;
-    background-color: #55b7dd;
+    background-color:rgb(206, 227, 225);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -62,42 +64,62 @@ body {
 .menu-item:not(.center-item) {
     opacity: 0;
   }
+
+  #leave-messsage{
+    padding-left: 2rem;
+    font-size: .7rem;
+  }
   
   .menu-item:nth-child(1) {
-    transform: rotateY(-70deg) rotateX(20deg) translateX(-50rem)
+    transform: rotateY(-70deg) rotateX(20deg) translateX(-70rem)
       translateY(-15rem) translateZ(-50rem);
-    transition: transform 1.2s ease-in, opacity 1s ease-in, background-color 0.5s,
-      box-shadow 0.5s;
+    transition: transform 1.8s ease-in, opacity 1s ease-in, background-color 0.5s,
+      box-shadow 1s;
   }
   .menu-item:nth-child(2) {
-    transform: rotateY(-70deg) rotateX(20deg) translateX(-20rem) translateY(-5rem)
+    transform: rotateY(-70deg) rotateX(20deg) translateX(-30rem) translateY(-5rem)
       translateZ(-20rem);
-    transition: transform 1s ease-in, opacity 1s ease-in, background-color 0.5s,
+    transition: transform 1.6s ease-in, opacity 1s ease-in, background-color 0.5s,
       box-shadow 0.5s;
   }
-  
+
   .menu-item:nth-child(3) {
+    transform: rotateY(70deg) rotateX(20deg) translateX(30rem) translateY(-5rem)
+      translateZ(-20rem);
+    transition: transform 1.3s ease-in, opacity 1s ease-in, background-color 0.5s,
+      box-shadow 0.5s;
+  }
+
+  .menu-item:nth-child(4) {
     transform: rotateX(20deg);
     transition: transform 1s ease-in, background-color 0.5s, box-shadow 0.5s;
   }
   
-  .menu-item:nth-child(4) {
-    transform: rotateY(70deg) rotateX(20deg) translateX(20rem) translateY(-5rem)
-      translateZ(-20rem);
-    transition: transform 1s ease-in, opacity 1s ease-in, background-color 0.5s,
-      box-shadow 0.5s;
-  }
-  
   .menu-item:nth-child(5) {
-    transform: rotateY(70deg) rotateX(20deg) translateX(50rem) translateY(-15rem)
-      translateZ(-50rem);
-    transition: transform 1.2s ease-in, opacity 1s ease-in, background-color 0.5s,
+    transform: rotateY(0deg) rotateX(20deg) translateX(40rem) translateY(-15rem)
+      translateZ(-80rem);
+    transition: transform 1.3s ease-in, opacity 1s ease-in, background-color 0.5s,
       box-shadow 0.5s;
   }
-  
+  .menu-item:nth-child(6) {
+    transform: rotateY(-70deg) rotateX(20deg) translateX(-80rem) translateY(-5rem)
+      translateY(-15rem) translateZ(-50rem);
+    transition: transform 1.6s ease-in, opacity 1s ease-in, background-color 0.5s,
+      box-shadow 0.5s;
+  }
+  .menu-item:nth-child(7) {
+    transform: rotateY(-70deg) rotateX(20deg) translateX(-70rem) translateY(-5rem)
+      translateZ(-15rem);
+    transition: transform 1.8s ease-in, opacity 1s ease-in, background-color 0.5s,
+      box-shadow 0.5s;
+  }
 
+  .menu-item a{
+    font-size: 1.4rem;
+  }
   .menu-item i {
-    font-size: 4rem;
+    margin-right: 5px;
+    font-size: 2rem;
     color: rgb(93, 91, 203);
     transition: color 0.13s;
   }
@@ -106,12 +128,16 @@ body {
     color: #6464ff;
   }
 
-
+.text-box{
+  padding: 1rem;
+}
+/*
 .headshot{
-    height:250px;
+    padding: 1rem;
+    height:2500px;
     width: 200px;
 }
-
+*/
 a:hover {
     color: rgb(144, 11, 221);
 }
@@ -137,7 +163,7 @@ li {
  border-block-style: groove;
 }
 
-#experience, .skill-title {
+#work, #experience, .skill-title {
     padding: 1rem 1rem 3rem 3rem;
     text-align: center;
 }
@@ -152,7 +178,7 @@ li {
     
 }
 
-#connect {
+#work, #connect, #skills {
     text-align: center;
 }
 
@@ -171,7 +197,7 @@ form, #name, #email, #textArea {
     align-items: center;
     justify-items: center;
    /* justify-content: space-around;*/
-    padding-top: 5rem;
+    padding-top: 2.5rem;
 }
 
 label {
@@ -198,7 +224,7 @@ input[type=text], [type=email], textArea{
   .btn{
     padding: 1rem;
     margin: 3rem 0 5rem 38rem;
-    background-color: rgba(119, 193, 225, 0.637);
+    background-color: rgba(32, 122, 161, 0.637);
     border-radius: 2rem;
     place-content: center;
     align-items: center;
@@ -210,19 +236,104 @@ input[type=text], [type=email], textArea{
   }
 
   footer{
-    background-color: antiquewhite;
+    background-color: rgb(79, 170, 223);
     padding-left: 38rem;
   }
- 
 
+  #myBtn{
+    position:absolute;
+    right: 13rem;
+    padding: 2px;
+    margin-top: .5rem;
+    font-size: 2rem;
+    border: none;
+    outline: none;
+    background-color: rgb(61, 135, 247);
+    color: white;
+    cursor: pointer;
+  }
+/***********************************************************************************/
   @media screen and (min-width: 320px) and (max-width: 480px){
+  
+    .container {
+      width: 100%;
+      height: 20vh;
+      background-color: rgb(92, 92, 167);
+      perspective: 10rem;
+  }
+  
+  .menu {
+      font-size: 10px;
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(3, 100px);
+      grid-template-rows: 2rem 2rem ;
+      justify-items: center;
+      /*grid-template-columns: 1rem 1rem 1rem;*/
+      transform-style: preserve-3d;
+      padding: 2rem 0 1rem 0 ;
+    }
+
+    .menu-item {
+  
+      width: 7rem;
+      height: 2.4rem;
+      background-color:rgb(206, 227, 225);
+      align-items: center;
+      border-radius: 1rem;
+      cursor: pointer;
+      box-shadow: 0 0 2rem rgba(100, 100, 255, 0.4);
+  }
+
+  .menu .center-item{
+    margin-top: 2.2rem;
+    text-align: center;
+    grid-column: 1 / 7;
+  }
+
+  .menu-item a{
+    position: relative;
+    font-size: 1rem;
+  }
+  .menu-item i {
+    font-size: 1rem;
+    margin-right: 5px;
+    color: rgb(93, 91, 203);
+    transition: color 0.13s;
+  }
+
+    .headshot{
+      height:150px;
+      width: 200px;
+  } 
+    figcaption{
+      font-size: 1rem;
+  }
+
+  #leave-messsage{
+    padding-left: 0rem;
+  }
+
+  #contact-me{
+    padding-left: 0;
+  }
+
+  #images-animals img{
+    width: 200px;
+    height: 180px;
+  }
+
+  #work ul {
+    overflow: hidden;
+   
+  }
     #experience, .skill-title {
         padding: 1rem 1rem 3rem 3rem;
         text-align: center;
     }
     
     .experience-list, .skill-list {
-        padding-left: 6rem;
+        padding-left: 1rem;
         display: grid;
         max-width: 1000px;
         grid-template-columns: 22rem;
@@ -261,10 +372,24 @@ input[type=text], [type=email], textArea{
     
       footer{
         background-color: antiquewhite;
-        padding-left: 10rem;
+        padding-left: 7rem;
+      }
+
+      #myBtn{
+        position:absolute;
+        right: 2rem;
+        padding: 1px;
+        margin-top: .3rem;
+        font-size: 1rem;
+        border: none;
+        outline: none;
+        background-color: rgb(74, 143, 222);
+        color: white;
+        cursor: pointer;
       }
   }
 
+  /************************************************************************************/
   @media screen and (min-width: 600px) and (max-width: 768px){
 
     body {
@@ -272,9 +397,61 @@ input[type=text], [type=email], textArea{
         padding: 1.5rem;
         color: brown;
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
+    .menu {
+      font-size: 20px;
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(3, 14rem);
+      grid-template-rows: 2rem 2rem ;
+      justify-items: center;
+      /*grid-template-columns: 1rem 1rem 1rem;*/
+      transform-style: preserve-3d;
+      padding: 2rem 0 1rem 0;
+    }
+
+    .menu-item {
+      width: 14rem;
+      height: 5rem;
+      background-color:rgb(206, 227, 225);
+      align-items: center;
+      border-radius: 1rem;
+      cursor: pointer;
+      box-shadow: 0 0 2rem rgba(100, 100, 255, 0.4);
+  }
+
+  .menu .center-item{
+    height: 4rem;
+    width: 10rem;
+    margin-top: 2.2rem;
+    margin-left: 43rem;
+    text-align: center;
+    grid-column: 1 / 7;
+  }
+
+  .menu-item a{
+    position: relative;
+    font-size: 2.3rem;
+  }
+  .menu-item i {
+    font-size: 2rem;
+    margin-right: 5px;
+    color: rgb(93, 91, 203);
+    transition: color 0.13s;
+  }
+
+  #leave-messsage{
+    width: 12rem;
+    padding-left: 1rem;
+    font-size: 2rem;
+  }
+
+  .menu-item:nth-child(4) {
+    transform: rotateX(0deg);
+    transition: transform 1s ease-in, background-color 0.5s, box-shadow 0.5s;
+  }
     .headshot {
         height:300px;
         width: 250px;
@@ -288,10 +465,40 @@ input[type=text], [type=email], textArea{
         grid-template-columns: 35rem;
         grid-gap: 4rem;
     }
+    #leave_a_message form{
+      padding: 3rem;
+    }
+
+    form, #name, #email, #textArea {
+      display: grid;
+      margin: 1rem 0 1rem 0;
+      place-content: center;
+      grid-template-columns:  25rem 6rem 25rem;
+      align-items: center;
+      justify-items: center;
+     /* justify-content: space-around;*/
+      padding-top: 3rem;
+  }
+
+  input[type=text], [type=email], textArea{
+    font-size: 2rem;
+    width: 18rem;
+    height: 2rem;
+    color:darkolivegreen;
+    padding: 1rem;
+    margin: .5rem;
+    border: solid .4rem rgb(51, 166, 224);
+    border-radius: 1rem; 
+  }
+
+  textArea{
+    height: 8rem;
+    width: 25rem;
+  }
 
     .btn{
         padding: 1rem;
-        margin: 3rem 0 5rem 38rem;
+        margin: 3rem 0 5rem 30rem;
         background-color: rgba(211, 119, 225, 0.637);
         border-radius: 2rem;
         place-content: center;
@@ -301,7 +508,7 @@ input[type=text], [type=email], textArea{
     
       footer{
         background-color: antiquewhite;
-        padding-left: 20rem;
+        padding-left: 18rem;
       }
 
       .remove-button{
@@ -310,25 +517,49 @@ input[type=text], [type=email], textArea{
         font-size: 18px;
         border-radius: 2rem;
       }
+
+      #myBtn{
+        position:absolute;
+        right: 5rem;
+        padding: 2px;
+        margin-top: .5rem;
+        font-size: 1.4rem;
+        border: none;
+        outline: none;
+        background-color: rgb(74, 143, 222);
+        color: white;
+        cursor: pointer;
+      }
   }
 
+  /*****************************************************************************************/
   @media screen and (min-width: 900px) and (max-width: 1024px){
 
     body {
         font-size: 3.5rem;
+       
+    }
+
+    .menu {
+      width: 100%;
+      padding: 0 ;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      transform-style: preserve-3d;
     }
 
     .headshot {
-        height:350px;
-        width: 280px;
+        height:180px;
+        width: 230px;
     }
 
     #home{
         font-size: 4.5rem;
     }
 
-    #experience, .skill-title {
-        font-size: 4.5rem;
+    #about, #experience, .skill-title, .projects, #connect, #contact, .message-title {
+        font-size: 5rem;
     }
     
     .experience-list, .skill-list {
@@ -354,7 +585,20 @@ input[type=text], [type=email], textArea{
     
       footer{
         background-color: antiquewhite;
-        padding-left: 26rem;
+        padding-left: 32rem;
+      }
+
+      #myBtn{
+        position:absolute;
+        right: 8rem;
+        padding: 2.5px;
+        margin-top: .5rem;
+        font-size: 2.2rem;
+        border: none;
+        outline: none;
+        background-color: rgb(110, 110, 248);
+        color: white;
+        cursor: pointer;
       }
 
       .remove-button{
@@ -369,6 +613,7 @@ input[type=text], [type=email], textArea{
 
     body {
         font-size: 6rem;
+        
     }
 
     .headshot {
@@ -413,5 +658,17 @@ input[type=text], [type=email], textArea{
         font-size: 23px;
         border-radius: 2rem;
       }
-  }
 
+      #myBtn{
+        position:absolute;
+        right: 8rem;
+        padding: 2.5px;
+        margin-top: .5rem;
+        font-size: 2.6rem;
+        border: none;
+        outline: none;
+        background-color: rgb(110, 110, 248);
+        color: white;
+        cursor: pointer;
+      }
+  }

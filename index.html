@@ -24,38 +24,46 @@
                     <a href="#about"> About</a>
                 </div>
                 <div class="menu-item">
-                    <i class="fas fa-users"></i>
-                    <a href="#work"> Work</a>
+
+                    <a href="#work"> Experience</a>
+                </div>
+                <div class="menu-item">
+
+                    <a href="#skills"> Skills</a>
                 </div>
                 <div class="menu-item center-item">
                     <i class="fas fa-home"></i>
                     <a href="#home"> Home</a>
                 </div>
                 <div class="menu-item">
-                    <i class="	fas fa-paint-brush"></i>
+
                     <a href="#projects"> Projects</a>
                 </div>
-                <div class="menu-item">
+                <div class="menu-item" id="leave-messsage">
+
+                    <a href="#leave_a_message"> Message Me</a>
+                </div>
+                <div class="menu-item" id="contact-me">
                     <i class="fas fa-address-card"></i>
                     <a href="#contact"> Contact</a>
                 </div>
-
             </div>
         </div>
-        <div class="text-box">
-            <h1 id="home">Valeri Guerrero</h1>
-            <!--a picture of myself-->
-            <figure>
-                <img class="headshot" src="./Valeri.png" alt="Picture of myself">
-                <figcaption class="caption"> Valeri Guerrero</figcaption>
-            </figure>
-        </div>
     </nav>
+    <div class="text-box">
+        <h1 id="home">Valeri Guerrero</h1>
+        <!--a picture of myself-->
+        <figure>
+            <img class="headshot" src="./Valeri.png" alt="Picture of myself">
+            <figcaption class="caption"> Picture of myself</figcaption>
+        </figure>
+    </div>
+
     <!--  -->
-    <section>
+    <section id="images-animals">
         <h1 id="about"> About</h1>
         <p>Hello my name is Valeri Guerrero I recently started my journey with Code the Dream, I been learning how
-            to use Javascript, HTML and CSS. I decided to transition into tech because I know they're endless
+            to use Javascript, HTML and CSS. I decided to transition into tech because I know there's endless
             posibilities of what I can create. To me software development is interesting because if you set up your
             mind to start any business you already know the basics to build a website from scratch, or even if it's
             to
@@ -86,16 +94,10 @@
                 Building small websites
             </li>
             <li>
-                HTML: Intermediate
+                <a href="https://valeriguerrero.github.io/restaurant.io" target="_blank"> Restaurant Website</a>
             </li>
             <li>
-                CSS: Intermediate
-            </li>
-            <li>
-                <a href="https://valeriguerrero.github.io/restaurant.io" target="_blank"> Project Restaurant</a>
-            </li>
-            <li>
-                <a href=" https://valeriguerrero.github.io/" target="_blank"> Project Portfolio</a>
+                <a href=" https://valeriguerrero.github.io/" target="_blank"> Portfolio website</a>
             </li>
         </ul>
     </section>
@@ -106,19 +108,24 @@
         </ul>
     </section>
     <section id="projects">
-        <h2>Projects</h2>
+        <h2 class="projects">Projects</h2>
         <ul>
 
         </ul>
     </section>
     <section>
-        <h1 id="connect">Connect</h1>
+        <h1 id="connect">Contact Me</h1>
         <p class="my-email">
             valeriguerrero@outlook.com
         </p>
+        <p class="linkedin">
+            <a href="https://www.linkedin.com/in/valeri-guerrero-344a66207/" target="_blank">Linkedin</a>
+        </p>
+        <br>
         <p class="twitter">
             <a href="https://twitter.com/lifecoachVale" target="_blank" class="btn-small">Twitter</a>
         </p>
+        <br>
         <p class="github">
             <a href="https://github.com/ValeriGuerrero"> Github</a>
         </p>
@@ -151,7 +158,7 @@
 
     </section>
     <footer>
-
+        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
     </footer>
     <script src="js/index.js"></script>
 </body>
